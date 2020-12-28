@@ -3,8 +3,6 @@ package example.counting.web;
 import example.counting.data.CountingResult;
 import example.counting.data.Type;
 import example.counting.services.IMsgService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;

@@ -3,6 +3,7 @@ package example.view.jms;
 import example.view.services.IViewService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import javax.ejb.MessageDriven;
 import javax.inject.Inject;
 import javax.jms.JMSException;
@@ -14,7 +15,7 @@ import javax.jms.MessageListener;
  */
 @MessageDriven(mappedName = "jms/countingResultQueue")
 public class CountingMessageListener implements MessageListener {
-
+    private Logger logger = LoggerFactory.getLogger(CountingMessageListener.class);
     @Inject
     private IViewService service;
 
@@ -23,7 +24,7 @@ public class CountingMessageListener implements MessageListener {
         try {
             service.processMessage(message.getBody(String.class));
         } catch (JMSException e) {
-            e.printStackTrace();
+            logger.error("Error processing message", e);
         }
     }
 }
