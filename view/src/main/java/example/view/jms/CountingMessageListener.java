@@ -15,8 +15,6 @@ import javax.jms.MessageListener;
 @MessageDriven(mappedName = "jms/countingResultQueue")
 public class CountingMessageListener implements MessageListener {
 
-    private static Logger logger = LoggerFactory.getLogger(CountingMessageListener.class);
-
     @Inject
     private IViewService service;
 

@@ -31,8 +31,6 @@ public class PutServlet extends HttpServlet {
     public static final String WRONG_DATE = "Wrong parameter date %s";
     public static final String WRONG_YEAR = "Max possible year 9999";
 
-    Logger logger = LoggerFactory.getLogger(PutServlet.class);
-
     @Inject
     private IMsgService msgService;
 

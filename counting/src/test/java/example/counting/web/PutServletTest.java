@@ -19,7 +19,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 class PutServletTest {
-
     @Mock
     private HttpServletRequest request;
     @Mock

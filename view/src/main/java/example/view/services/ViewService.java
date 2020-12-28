@@ -18,8 +18,7 @@ import java.util.List;
  * @author evgkhan
  */
 public class ViewService implements IViewService {
-    Logger logger = LoggerFactory.getLogger(ViewService.class);
-
+    private Logger logger = LoggerFactory.getLogger(ViewService.class);
     @Inject
     private ICountingResultRepository repository;
 

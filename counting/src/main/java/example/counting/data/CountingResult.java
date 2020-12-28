@@ -13,6 +13,13 @@ import java.util.Objects;
 @XmlType(name = "CountingResult")
 @XmlRootElement
 public class CountingResult {
+    @XmlAttribute
+    private Type type;
+    @XmlAttribute
+    private int count;
+    @XmlAttribute
+    private Date date;
+
     public CountingResult() {
     }
 
@@ -21,13 +28,6 @@ public class CountingResult {
         this.count = count;
         this.date = date;
     }
-
-    @XmlAttribute
-    private Type type;
-    @XmlAttribute
-    private int count;
-    @XmlAttribute
-    private Date date;
 
     @Override
     public boolean equals(Object o) {

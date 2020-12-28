@@ -16,7 +16,7 @@ import java.util.List;
 public class CountingResultRepository implements ICountingResultRepository {
 
     @PersistenceContext
-    EntityManager em;
+    private EntityManager em;
 
     @Override
     public void addCountingResult(CountingResult countingResult) {
