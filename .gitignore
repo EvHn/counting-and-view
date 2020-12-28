@@ -1,0 +1,6 @@
+counting/target/
+ear/target/
+view/target/
+**/*.iml
+.idea/
+ear/**/application.xml
