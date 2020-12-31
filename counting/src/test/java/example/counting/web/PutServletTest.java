@@ -90,7 +90,7 @@ class PutServletTest {
     void doPost_WRONG_YEAR() throws ServletException, IOException {
         when(request.getParameter("type")).thenReturn(Type.Stone.name());
         when(request.getParameter("count")).thenReturn("13");
-        when(request.getParameter("date")).thenReturn(String.valueOf("1231233-12-31"));
+        when(request.getParameter("date")).thenReturn("1231233-12-31");
 
         putServlet.doPost(request, response);
         verify(response, atLeastOnce()).sendError(HttpServletResponse.SC_BAD_REQUEST, PutServlet.WRONG_YEAR);
